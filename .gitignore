@@ -1,8 +1,3 @@
-# Python
-__pycache__/
-*.py[cod]
-*.pyo
-
 # Virtual environment
 venv/
 .venv/
@@ -11,15 +6,13 @@ env/
 # Environment variables
 .env
 
+# Datasets
+data/raw/*
+!data/raw/.gitkeep
+
 # IDE
 .vscode/
 .idea/
-
-# data sets
-data/raw/
-# OS
-.DS_Store
-Thumbs.db
 
 # Test / coverage
 .pytest_cache/
