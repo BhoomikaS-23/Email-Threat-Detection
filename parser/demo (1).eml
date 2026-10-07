@@ -1,0 +1,23 @@
+From: security-alert@example.com
+To: user@example.com
+Date: Wed, 7 Oct 2026 07:10:00 +0530
+Subject: Security Alert - Please Review Your Account
+Message-ID: <demo-001@example.com>
+MIME-Version: 1.0
+Content-Type: text/plain; charset="UTF-8"
+Reply-To: support@example.com
+Received: from mail.example.com (mail.example.com [192.0.2.10])
+        by mx.example.net with ESMTPS id DEMO123
+        for <user@example.com>; Wed, 7 Oct 2026 07:10:00 +0530
+
+Hello,
+
+We detected a login attempt on your account from a new device.
+
+Please review your recent account activity by visiting:
+https://example.com/account/security
+
+If this was not you, contact our support team at support@example.com.
+
+Regards,
+Security Team
