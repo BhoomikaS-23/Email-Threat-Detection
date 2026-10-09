@@ -9,7 +9,7 @@ Reply-To: support@example.com
 Received: from mail.example.com (mail.example.com [192.0.2.10])
         by mx.example.net with ESMTPS id DEMO123
         for <user@example.com>; Wed, 7 Oct 2026 07:10:00 +0530
-Authentication-Results: mx.example.com; spf=pass; dkim=pass; dmarc=pass
+
 Hello,
 
 We detected a login attempt on your account from a new device.

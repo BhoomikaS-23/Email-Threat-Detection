@@ -7,13 +7,15 @@ from schemas import ParsedEmail, EngineResult
 from header_engine.header_engine import analyze_headers
 from geo_engine.geo_engine import trace_origin
 from reputation_engine.reputation_engine import check_reputation
+from nlp_engine.nlp_engine import classify_email
 
 # Each engine returns a score from 0 to 1. Weights say how much each one counts.
 # nlp_engine will be added here later.
 ENGINES = {
-    "header_engine": (analyze_headers, 0.4),
-    "geo_engine": (trace_origin, 0.2),
-    "reputation_engine": (check_reputation, 0.4),
+    "nlp_engine": (classify_email, 0.4),
+    "header_engine": (analyze_headers, 0.25),
+    "geo_engine": (trace_origin, 0.1),
+    "reputation_engine": (check_reputation, 0.25),
 }
 
 
@@ -71,7 +73,7 @@ if __name__ == "__main__":
 
     from parser.parser import parse_email_file
 
-    email = parse_email_file("data/raw/real.eml")
+    email = parse_email_file("parser/demo.eml")
     report = analyze_email(email)
 
     print("RISK:", report["risk_level"], report["risk_score"])

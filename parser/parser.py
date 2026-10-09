@@ -228,7 +228,7 @@ def get_body(msg):
 def clean_text(text):
     if not text:
         return ""
-
+    text = re.sub(r"<!--.*?-->", "", text, flags=re.DOTALL)
     text = re.sub(r"[\u200b-\u200f\u202a-\u202e\u2060\ufeff\u00ad]", "", text)
     text = re.sub(r"\s+", " ", text)
     return text.strip()
